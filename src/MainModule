@@ -1,0 +1,14 @@
+module UBItelematics
+
+import Base: ifelse, +, -, *, ==, /
+
+# using PACKAGE
+# import PACKAGE: FUNCTION, FUNCTION, ...
+
+export # MODULE DEFINED FUNCTIONS
+
+# include all source files (under src/)
+
+UBItelematics
+
+end # module
