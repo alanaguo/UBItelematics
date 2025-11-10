@@ -1,3 +1,0 @@
-    function safe_divide(x,y)
-        return ifelse.(y .== 0, 0, x ./ y)
-    end
