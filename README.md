@@ -6,7 +6,7 @@ This repository contains the source code, simulation data, and for the paper **P
 To enhance usability, simplify integration into other workflows, and ensure consistent execution, the code is packaged into a lightweight, easy-to-install module. *(building of this repository is still in progress, expected to be completed by the end of 2025)*
 
 ## Data
-The dataset `SimUBIDataset` is a cleaned simulation driving behavior dataset containing daily-summarized statistics for 5528 drivers, based on their aggregated driving behavior data over a 2–3 year period. This is a large dataset with around 23 million records and 14 variables. The complete dataset is available for direct download [here](https://www.dropbox.com/scl/fi/1cwt7ran6usrtn4q1erba/simUBIDataset.csv?rlkey=gzzjfzmcxmt18ywwn7mfuesbb&st=wg0gn0bu&dl=1).
+The dataset `SimUBIDataset` is a cleaned simulation driving behavior dataset containing daily-summarized statistics for 5528 drivers, based on their aggregated driving behavior data over a 2–3 year period. This is a large dataset with around 2.3 million records and 14 variables. The complete dataset is available for direct download [here](https://www.dropbox.com/scl/fi/1cwt7ran6usrtn4q1erba/simUBIDataset.csv?rlkey=gzzjfzmcxmt18ywwn7mfuesbb&st=wg0gn0bu&dl=1).
 
 | Variable             | Description                |
 |----------------------|-------------------------------|
