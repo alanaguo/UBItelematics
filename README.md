@@ -1,19 +1,31 @@
 # UBItelematics
-source code for paper xxx. (building of this repository is still in progress, expected to be completed by the end of 2025)
 
-## Introduction
-This repository contains the source code, simulation data, and for the paper **PAPER TITLE**. It implements **THE PROPOSED FRAMEWORK** designed to **TBA**. The primary languages used in this repository are [Julia](https://julialang.org/) and [R](https://www.r-project.org/).
+## Overview
+This repository contains the source code, simulation data, and for the paper **PAPER TITLE**. It implements a dynamic pricing framework based on the logit-reduced mixture-of-experts model ([LRMoE.jl](https://actsci.utstat.utoronto.ca/LRMoE.jl/stable/)) designed for usage-based auto insurance pricing. The primary languages used in this repository are [Julia](https://julialang.org/) and [R](https://www.r-project.org/).
 
-To enhance usability, simplify integration into other workflows, and ensure consistent execution, the code is packaged into a lightweight, easy-to-install module.
+To enhance usability, simplify integration into other workflows, and ensure consistent execution, the code is packaged into a lightweight, easy-to-install module. *(building of this repository is still in progress, expected to be completed by the end of 2025)*
 
 ## Data
-The dataset `SimUBIDataset` is a cleaned simulation dataset containing driving behavior data. **FURTHER EXPLANATION**.
+The dataset `SimUBIDataset` is a cleaned simulation driving behavior dataset containing daily-summarized statistics for 5528 drivers, based on their aggregated driving behavior data over a 2–3 year period. This is a large dataset with around 23 million records and 14 variables. The complete dataset is available for direct download [here](https://www.dropbox.com/scl/fi/1cwt7ran6usrtn4q1erba/simUBIDataset.csv?rlkey=gzzjfzmcxmt18ywwn7mfuesbb&st=wg0gn0bu&dl=1).
+
+| Variable               | Description                |
+|----------------------|-------------------------------|
+| DayID                | -                      |
+| DriverID             | -                      |
+| total_triplength     | Daily total driving duration in hours                    |
+| total_tripdistance   | Daily total driving distance in kilometers             |
+| hbrk                 | Daily sum statistics of harsh braking events                    |
+| turn                 | Daily sum statistics of sharp turning events                      |
+| numtrip              | Daily sum statistics of number of trips                      |
+| peakprop             | Proportion of time travelled during rush hours                  |
+| avr_hbrk             | hbrk/total_tripdistance                |
+| avr_turn             | turn/total_tripdistance                  |
+| notripdays           | accumulated sum statistics of days without trips                    |
+| notripday_prop       | Proportion of accumulated sum statistics of days without trips up to date                |
+| accidents            | Number of accidents occured in the latest 365 days                     |
+| age                  | Age of the driver                    |
 
 ## Implementation
 To initialize, use [setup.jl](https://github.com/alanaguo/UBItelematics/edit/main/script/setup.jl) to set up the main module for implementation.
 
-
-**MODEL CONTENT**
-
-## Links
-**REFERENCE**
+## Acknowledgements
