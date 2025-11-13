@@ -17,7 +17,15 @@ using Statistics
 import Statistics: quantile
 
 using Distributions
-import Distributions: Normal, pdf, cdf
+import Distributions: Normal, Poisson, pdf, cdf
+
+using LRMoE
+import fit_LRMoE
+
+using Distributed
+
+using Combinatorics
+import Combinatorics: combinations
 
 # using PACKAGE
 # import PACKAGE: FUNCTION, FUNCTION, ...
@@ -28,7 +36,12 @@ export safe_divide,
        cooks_distance,
 
        generate_LRMoE_data,
+       bootstrap_LRMoE,
        LRMoE_CIp,
+       calculate_posterior_class,
+
+       gini,
+       gini2
        
        # MODULE DEFINED FUNCTIONS
 
