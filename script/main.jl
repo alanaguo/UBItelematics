@@ -1,3 +1,14 @@
+using DrWatson
+@quickactivate "UBItelematics-jl"
+
+using CSV, DataFrames, JLD2, CategoricalArrays, Statistics, Dates, Random, StableRNGs: StableRNG
+using Distributions, GLM, StatsBase, StatsModels, HypothesisTests, LogExpFunctions, ExpectationMaximization, LRMoE
+using Plots, StatsPlots, ColorSchemes
+using RCall, Resample
+
+using .UBItelematics
+
+
 data # original data
 
 # model 1: Poisson model(R)
