@@ -27,6 +27,9 @@ using Distributed
 using Combinatorics
 import Combinatorics: combinations
 
+using Dates
+import Dates: Year, Month, Day, value
+
 # using PACKAGE
 # import PACKAGE: FUNCTION, FUNCTION, ...
 
@@ -41,7 +44,15 @@ export safe_divide,
        calculate_posterior_class,
 
        gini,
-       gini2
+       gini2,
+
+       calculate_ncd_coeficients,
+
+       generate_mc_data,
+       generate_tripsperday,
+       generate_lengthpertrip,
+       generate_timestart,
+       generate_simulated_data
        
        # MODULE DEFINED FUNCTIONS
 
