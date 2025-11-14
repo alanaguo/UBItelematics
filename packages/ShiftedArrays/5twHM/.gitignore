@@ -1,0 +1,7 @@
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/already_showed
+*play.jl
+/Manifest.toml
+docs/build

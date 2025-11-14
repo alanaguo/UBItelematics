@@ -1,0 +1,35 @@
+name: docs
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [master]
+  #   tags: ['v1.*']
+  release:
+    types: [published]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref && github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: ${{ github.event_name != 'pull_request' || contains(github.event.pull_request.labels.*.name, 'documentation') }}
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: read
+      statuses: write
+    runs-on: ubuntu-latest
+    env:
+      PYTHON: ""
+      DOCUMENTER_KEY: ${{secrets.DOCUMENTER_KEY}}
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: julia-actions/setup-julia@latest
+      - uses: julia-actions/cache@v2
+      - run: bash -c '. ci/build-docs.sh; install_ubuntu_deps'
+      - run: bash -c '. ci/build-docs.sh; install_and_precompile_julia_deps'
+      - run: bash -c '. ci/build-docs.sh; build_documenter_docs'
